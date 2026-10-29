@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rizwan Grand - Luxury Hotel</title>
+<style>
+/* CSS Intro + Box Model + Colors */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Segoe UI, Arial;color:#333;line-height:1.6}
+header{background:#0f172a;color:white;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+nav a{color:#facc15;text-decoration:none;margin-left:20px;font-weight:600}
+nav a:hover{text-decoration:underline}
+.hero{background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200'); background-size:cover; color:white; text-align:center; padding:60px 5%}
+.hero h1{font-size:42px; text-shadow:2px 2px 8px black; text-transform:uppercase; letter-spacing:2px}
+.booking-box{background:white;color:#333;border-radius:16px;padding:20px;max-width:900px;margin:25px auto;display:flex;gap:15px;flex-wrap:wrap;justify-content:center; border:3px solid #facc15}
+.booking-box input, .booking-box select{padding:10px;border:1px solid #ccc;border-radius:8px}
+.btn{background:#facc15;color:#0f172a;border:none;padding:12px 28px;border-radius:8px;font-weight:bold;cursor:pointer}
+.rooms{padding:40px 5%;display:flex;gap:20px;flex-wrap:wrap;justify-content:center;background:#f1f5f9}
+.card{background:white;width:320px;border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,0.15);transition:0.3s}
+.card:hover{transform:translateY(-8px)}
+.card img{width:100%;height:200px;object-fit:cover}
+.card-body{padding:16px}
+.card-body h3{color:#0f172a;text-align:center}
+.price{color:green;font-weight:bold;text-align:center;font-size:18px}
+.facilities{padding:30px 5%;background:white}
+.facilities ul{columns:2; list-style: square inside;}
+table{width:100%;border-collapse:collapse;margin-top:15px}
+th,td{border:1px solid #ccc;padding:12px;text-align:center}
+th{background:#0f172a;color:#facc15}
+form.reservation{max-width:800px;margin:30px auto;background:#fff;padding:20px;border-radius:14px;border:1px solid #ddd}
+fieldset{padding:15px;border-radius:10px;margin-bottom:15px;border:1px solid #facc15}
+footer{background:#0f172a;color:#ccc;text-align:center;padding:20px;margin-top:20px}
+@media(max-width:700px){.hero h1{font-size:28px} header{justify-content:center} .booking-box{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<header>
+<div><b>RIZWAN GRAND</b> HOTELS</div>
+<nav><a href="#rooms">Rooms</a><a href="#tariff">Tariff</a><a href="#book">Book</a></nav>
+</header>
+
+<section class="hero">
+<h1>Welcome to Luxury</h1>
+<p>Best stay in Vizag - Comfort + Class</p>
+<!-- Check-in/out - MOST IMPORTANT FORM -->
+<div class="booking-box">
+<label>Check-in: <input type="date" required></label>
+<label>Check-out: <input type="date" required></label>
+<label>Guests: <input type="number" min="1" max="5" value="2"></label>
+<select><option>Deluxe</option><option>Executive</option><option>Suite</option></select>
+<button class="btn">Check Availability</button>
+</div>
+</section>
+
+<!-- Room Cards - Attractive -->
+<section id="rooms" class="rooms">
+<article class="card">
+<img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600" alt="Deluxe Room">
+<div class="card-body"><h3>Deluxe Room</h3><p>City view, AC, Free WiFi, 24/7 service</p><p class="price">₹2,999 / night</p></div>
+</article>
+<article class="card">
+<img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600" alt="Executive Room">
+<div class="card-body"><h3>Executive - AI Themed</h3><p>Work desk, Smart TV, For B-Tech CSE guys</p><p class="price">₹4,499 / night</p></div>
+</article>
+<article class="card">
+<img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600" alt="Royal Suite">
+<div class="card-body"><h3>Royal Suite</h3><p>King size bed, Jacuzzi, Sea view</p><p class="price">₹7,999 / night</p></div>
+</article>
+</section>
+
+<section class="facilities">
+<h2>Our Facilities</h2>
+<ul>
+<li>Free WiFi & Parking</li><li>Swimming Pool & Gym</li><li>Restaurant & Bar</li><li>Room Service 24/7</li><li>Conference Hall</li><li>Airport Pickup</li>
+</ul>
+
+<h2 id="tariff" style="margin-top:30px">Tariff Table</h2>
+<table>
+<tr><th>Room Type</th><th>AC/Non-AC</th><th>Price</th></tr>
+<tr><td>Deluxe</td><td>AC</td><td>₹2,999</td></tr>
+<tr><td>Executive</td><td>AC</td><td>₹4,499</td></tr>
+<tr><td colspan="2"><b>Royal Suite (Full Luxury)</b></td><td>₹7,999</td></tr>
+</table>
+</section>
+
+<!-- Final Reservation Form - Full Syllabus -->
+<form class="reservation" id="book" method="GET">
+<h2 style="text-align:center; color:#0f172a;">Reservation Form</h2>
+<fieldset><legend>Personal Details</legend>
+<input type="text" placeholder="Full Name" required style="width:48%;padding:10px">
+<input type="tel" placeholder="Phone No" required style="width:48%;padding:10px">
+<br><br>
+<input type="email" placeholder="Email" style="width:100%;padding:10px">
+</fieldset>
+<fieldset><legend>Booking Info</legend>
+<label>Check-in: <input type="date"></label> <label>Check-out: <input type="date"></label><br><br>
+<label>Room: <input list="rooms-list"><datalist id="rooms-list"><option value="Deluxe"><option value="Executive"><option value="Suite"></datalist></label>
+<label>Payment: <input type="radio" name="pay">UPI <input type="radio" name="pay">Card</label>
+</fieldset>
+<textarea placeholder="Special Request" rows="3" style="width:100%;padding:10px"></textarea><br><br>
+<label><input type="checkbox" required> I agree to terms</label><br><br>
+<button class="btn" type="submit">CONFIRM BOOKING</button>
+<button class="btn" type="reset" style="background:#ddd">Reset</button>
+</form>
+
+<footer>© 2026 Rizwan Grand Hotels, Vizag | Contact: grand@example.com</footer>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RIZWAN ESPORTS - Gaming Portal</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Arial;background:#0a0a0f;color:#e0e0e0;line-height:1.5}
+header{background:#12121a;display:flex;justify-content:space-between;align-items:center;padding:12px 5%;border-bottom:2px solid #ff0040;position:sticky;top:0;z-index:10}
+.logo{color:#fff;font-weight:900;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 8px #ff0040}
+.logo span{color:#00ff88}
+nav a{color:#aaa;text-decoration:none;margin-left:18px;font-weight:600;font-size:14px}
+nav a:hover{color:#00ff88;text-shadow:0 0 6px #00ff88}
+.hero{background:radial-gradient(circle at top,#1a1a2e,#0a0a0f);padding:40px 5%;display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+.hero h1{font-size:36px;color:white;text-transform:uppercase;letter-spacing:1px;text-shadow:0 0 10px #ff0040}
+.tag{background:#ff0040;color:white;padding:3px 8px;border-radius:4px;font-size:12px}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:20px 5%}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.game-card{background:#15151f;border:1px solid #2a2a3a;border-radius:12px;overflow:hidden;transition:0.3s}
+.game-card:hover{transform:translateY(-6px);border-color:#00ff88;box-shadow:0 0 20px rgba(0,255,136,0.3)}
+.game-card img{width:100%;height:140px;object-fit:cover}
+.body{padding:10px}
+.body h3{color:#fff;font-size:16px}
+.small{font-size:12px;color:#888}
+.btn{padding:8px 14px;border:none;border-radius:6px;font-weight:bold;cursor:pointer}
+.play{background:#00ff88;color:#000}
+table{width:100%;border-collapse:collapse;margin-top:10px;background:#15151f;border-radius:10px;overflow:hidden}
+th,td{padding:10px;text-align:left;border-bottom:1px solid #2a2a3a;font-size:13px}
+th{background:#1f1f2f;color:#00ff88;text-transform:uppercase}
+tr:hover{background:#1e1e2e}
+.rank{color:#ffe11b;font-weight:bold}
+.news{background:#15151f;border-radius:12px;padding:15px;border:1px solid #2a2a3a}
+.news ul{list-style:none}
+.news li{padding:10px 0;border-bottom:1px solid #222}
+.news mark{background:#00ff88;color:#000;padding:1px 6px;border-radius:3px}
+form.join{background:#12121a;margin:20px 5%;padding:18px;border-radius:12px;border:1px solid #ff0040;display:flex;gap:10px;flex-wrap:wrap}
+form.join input, form.join select{padding:9px;border-radius:6px;border:1px solid #333;background:#0a0a0f;color:white}
+footer{background:#08080c;color:#666;text-align:center;padding:18px;border-top:1px solid #222}
+@media(max-width:800px){.grid{grid-template-columns:1fr} .hero h1{font-size:26px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">RIZWAN <span>ESPORTS</span></div>
+<nav><a href="#games">Games</a><a href="#teams">Teams</a><a href="#leader">Leaderboard</a><a href="#news">News</a></nav>
+</header>
+
+<section class="hero">
+<div>
+<span class="tag">LIVE TOURNAMENT</span>
+<h1>Valorant Champions Vizag 2026</h1>
+<p class="small">Prize Pool: ₹10 Lakhs | 32 Teams | Final on 15 Nov</p>
+<br>
+<label style="font-size:13px">Search Player: <input type="search" list="players" placeholder="Rizwan, Hiya, Sandesh" style="padding:7px;border-radius:6px;border:none"></label>
+<datalist id="players"><option value="RIZWAN"><option value="HIYA"><option value="SANDESH"><option value="TEAM GODLIKE"></datalist>
+<button class="btn play">Watch Live</button>
+</div>
+<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="Esports" style="width:320px;border-radius:12px;border:2px solid #ff0040">
+</section>
+
+<div class="grid">
+<!-- Left: Games + Teams -->
+<main>
+<h2 id="games" style="color:#00ff88;margin-bottom:10px">Game Profiles</h2>
+<div class="cards">
+<article class="game-card">
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400" alt="Valorant">
+<div class="body"><h3>VALORANT</h3><p class="small">FPS • 5v5 Tactical</p><p class="small">Top Team: <b style="color:#fff">RIZWAN LEGION</b></p><button class="btn play">Play Now</button></div>
+</article>
+<article class="game-card">
+<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=400" alt="BGMI">
+<div class="body"><h3>BGMI</h3><p class="small">Battle Royale • 100 Players</p><p class="small">Top Team: <b style="color:#fff">Team Hydra</b></p><button class="btn play">Play Now</button></div>
+</article>
+<article class="game-card">
+<img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400" alt="Free Fire">
+<div class="body"><h3>Free Fire MAX</h3><p class="small">Fast BR • 50 Players</p><p class="small">Top Player: <b style="color:#fff">HIYA QUEEN</b></p><button class="btn play">Play Now</button></div>
+</article>
+</div>
+
+<h2 id="teams" style="color:#ff0040;margin:20px 0 10px">Team & Player Profiles</h2>
+<table>
+<tr><th>Team</th><th>Captain</th><th>Game</th><th>Wins</th></tr>
+<tr><td>RIZWAN LEGION</td><td>Rizwan (CSE AI/ML)</td><td>Valorant</td><td>42</td></tr>
+<tr><td>HYDRA ESPORTS</td><td>Hiya</td><td>BGMI</td><td>38</td></tr>
+<tr><td colspan="3"><b>VILLAIN SQUAD - Sandesh</b> (Banned for hacking)</td><td>12</td></tr>
+</table>
+
+<h2 id="leader" style="color:#ffe11b;margin:20px 0 10px">Leaderboard - Top Players</h2>
+<table>
+<tr><th>Rank</th><th>Player</th><th>K/D</th><th>Points</th></tr>
+<tr><td class="rank">#1</td><td>RIZWAN - 6ft Striker</td><td>4.8</td><td>9,850</td></tr>
+<tr><td class="rank">#2</td><td>HIYA</td><td>4.2</td><td>9,200</td></tr>
+<tr><td class="rank">#3</td><td>SANDESH</td><td>2.1</td><td>5,100</td></tr>
+</table>
+</main>
+
+<!-- Right: News + Schedule -->
+<aside>
+<div class="news" id="news">
+<h3 style="color:#00ff88">Gaming News</h3>
+<ul>
+<li><mark>NEW</mark> Rizwan’s AI aimbot detector wins college hackathon</li>
+<li><small>2hrs ago</small> - BGMI 3.5 update with AI mode</li>
+<li><small>Yesterday</small> - Hiya clutch 1v4 in finals - viral</li>
+<li><small>Today</small> - Sandesh apologizes, wants rematch</li>
+</ul>
+<h3 style="color:#ff0040;margin-top:18px">Tournament Schedule</h3>
+<ol style="margin-left:18px;font-size:13px">
+<li>Nov 10 - Semi Final</li>
+<li>Nov 12 - Valorant Final</li>
+<li>Nov 15 - Grand Prize</li>
+</ol>
+</div>
+
+<div class="news" style="margin-top:14px">
+<h3>Esports Survey</h3>
+<form method="GET">
+<label>Your Fav Game:<br><select style="width:100%;margin-top:6px"><optgroup label="FPS"><option>Valorant</option><option>BGMI</option></optgroup><option>Free Fire</option></select></label><br><br>
+<label><input type="radio" name="type"> Pro Player</label> <label><input type="radio" name="type"> Viewer</label><br><br>
+<input type="email" placeholder="Email for updates" style="width:100%"><br><br>
+<button class="btn play" style="width:100%">Subscribe</button>
+</form>
+</div>
+</aside>
+</div>
+
+<form class="join">
+<b style="color:#fff">Join Tournament:</b>
+<input type="text" placeholder="Team Name" required>
+<input type="text" placeholder="Captain (Rizwan)" required>
+<input type="color" value="#00ff88" title="Team Color">
+<input type="number" min="1" max="5" placeholder="Players">
+<button class="btn" style="background:#ff0040;color:white">Register</button>
+</form>
+
+<footer>© 2026 RIZWAN ESPORTS | Made for Web Dev Practical | F-Pattern + Dark UI/UX + Table Effects</footer>
+</body>
+</html>

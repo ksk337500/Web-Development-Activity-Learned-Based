@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rizwan Mart - E-Commerce</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Segoe UI, Arial;background:#f1f2f4;color:#212121}
+header{background:#2874f0;color:white;padding:12px 5%;display:flex;gap:15px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.logo{font-size:22px;font-weight:800;letter-spacing:1px}
+.search-bar{display:flex;flex:1;max-width:500px}
+.search-bar input{flex:1;padding:10px;border:none;border-radius:4px 0 0 4px}
+.search-bar button{padding:10px 18px;border:none;background:#ffe11b;color:#212121;font-weight:bold;border-radius:0 4px 4px 0;cursor:pointer}
+nav{background:white;padding:10px 5%;display:flex;gap:20px;box-shadow:0 1px 4px rgba(0,0,0,0.1);overflow-x:auto}
+nav a{color:#212121;text-decoration:none;font-weight:600;font-size:14px;text-transform:uppercase}
+.banner{background:linear-gradient(90deg,#2874f0,#1a237e);color:white;margin:15px 5%;border-radius:12px;padding:30px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.banner h1{font-size:32px;text-shadow:1px 1px 3px black}
+.banner mark{background:#ffe11b;padding:2px 8px;border-radius:4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;padding:15px 5%}
+.card{background:white;border-radius:8px;overflow:hidden;border:1px solid #e0e0e0;transition:0.2s}
+.card:hover{box-shadow:0 6px 16px rgba(0,0,0,0.2)}
+.card img{width:100%;height:180px;object-fit:contain;background:#fff;padding:10px}
+.body{padding:12px}
+.cat{font-size:12px;color:#878787;text-transform:uppercase}
+.title{font-size:15px;font-weight:600;margin:4px 0;height:40px}
+.rating{background:#388e3c;color:white;font-size:12px;padding:2px 6px;border-radius:3px}
+.price{display:flex;gap:8px;align-items:center;margin-top:6px}
+.new{font-weight:bold;font-size:18px}
+.old{font-size:13px;color:#878787;text-decoration:line-through}
+.off{color:#388e3c;font-size:13px;font-weight:bold}
+.desc{font-size:13px;color:#555;margin:6px 0}
+.btns{display:flex;gap:8px;margin-top:10px}
+.btn{flex:1;padding:9px;border:none;border-radius:4px;font-weight:bold;cursor:pointer}
+.cart{border:1px solid #c0c0c0;background:white}
+.buy{background:#fb641b;color:white}
+.filter{background:white;margin:15px 5%;padding:15px;border-radius:8px;border:1px solid #ddd}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{border:1px solid #ddd;padding:8px;text-align:left;font-size:13px}
+th{background:#2874f0;color:white}
+footer{background:#172337;color:#ccc;text-align:center;padding:20px;margin-top:20px}
+@media(max-width:600px){.banner h1{font-size:22px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">RIZWAN MART</div>
+<div class="search-bar">
+<input type="search" list="cats" placeholder="Search for products, brands and more">
+<datalist id="cats"><option value="Mobiles"><option value="Laptops"><option value="Shoes"><option value="AI Gadgets"></datalist>
+<button>Search</button>
+</div>
+<div><button class="btn cart" style="padding:8px 14px">Login</button> <button class="btn cart" style="padding:8px 14px">Cart (2)</button></div>
+</header>
+
+<nav>
+<a href="#">Electronics</a><a href="#">Mobiles</a><a href="#">Fashion</a><a href="#">CSE AI/ML Books</a><a href="#">Gadgets</a><a href="#">Home</a>
+</nav>
+
+<!-- Promotional Banner - Z-Pattern -->
+<div class="banner">
+<div>
+<h1>BIG BILLION DAYS</h1>
+<p>Extra <mark>20% OFF</mark> on AI/ML Laptops + Free Delivery</p>
+<p style="font-size:13px;margin-top:8px">Limited: <input type="date" style="padding:4px;border-radius:4px;border:none"></p>
+</div>
+<div style="background:white;color:#212121;padding:12px;border-radius:8px;text-align:center">
+<b>Coupon: RIZWAN20</b><br><small>Valid till tonight</small>
+</div>
+</div>
+
+<!-- Product Grid - Main -->
+<main class="grid">
+<!-- 6 Products with all details -->
+<article class="card">
+<img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400" alt="Laptop">
+<div class="body">
+<div class="cat">Laptops • CSE</div>
+<div class="title">HP Victus i5 AI Laptop 16GB RAM</div>
+<span class="rating">4.5 ★</span> <small>(2,341 ratings)</small>
+<div class="price"><span class="new">₹62,999</span><span class="old">₹89,999</span><span class="off">30% off</span></div>
+<p class="desc">RTX 3050, Perfect for AI/ML Projects, Gaming</p>
+<div class="btns"><button class="btn cart">Add to Cart</button><button class="btn buy">Buy Now</button></div>
+</div>
+</article>
+
+<article class="card">
+<img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=400" alt="Mobile">
+<div class="body">
+<div class="cat">Mobiles</div>
+<div class="title">Nothing Phone 2 - 256GB</div>
+<span class="rating">4.4 ★</span> <small>(8,102)</small>
+<div class="price"><span class="new">₹34,999</span><span class="old">₹44,999</span><span class="off">22% off</span></div>
+<p class="desc">Glyph lights, 4700mAh, Best for students</p>
+<div class="btns"><button class="btn cart">Add to Cart</button><button class="btn buy">Buy Now</button></div>
+</div>
+</article>
+
+<article class="card">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Shoes">
+<div class="body">
+<div class="cat">Fashion</div>
+<div class="title">Nike Air Max Running Shoes</div>
+<span class="rating">4.3 ★</span> <small>(1,203)</small>
+<div class="price"><span class="new">₹5,999</span><span class="old">₹9,999</span><span class="off">40% off</span></div>
+<p class="desc">Breathable, 6-feet hero look</p>
+<div class="btns"><button class="btn cart">Add to Cart</button><button class="btn buy">Buy Now</button></div>
+</div>
+</article>
+
+<article class="card">
+<img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400" alt="Headphone">
+<div class="body">
+<div class="cat">Gadgets</div>
+<div class="title">Sony WH-1000XM5 Headphones</div>
+<span class="rating">4.8 ★</span> <small>(12k)</small>
+<div class="price"><span class="new">₹26,999</span><span class="old">₹34,999</span><span class="off">23% off</span></div>
+<p class="desc">Noise Cancelling, 30hr battery</p>
+<div class="btns"><button class="btn cart">Add to Cart</button><button class="btn buy">Buy Now</button></div>
+</div>
+</article>
+
+<article class="card">
+<img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400" alt="AI Book">
+<div class="body">
+<div class="cat">Books</div>
+<div class="title">AI & ML Handbook for B-Tech</div>
+<span class="rating">4.9 ★</span> <small>(540)</small>
+<div class="price"><span class="new">₹599</span><span class="old">₹999</span><span class="off">40% off</span></div>
+<p class="desc">By Hiya & Rizwan, with Python projects</p>
+<div class="btns"><button class="btn cart">Add to Cart</button><button class="btn buy">Buy Now</button></div>
+</div>
+</article>
+
+<article class="card">
+<img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=400" alt="Watch">
+<div class="body">
+<div class="cat">Wearables</div>
+<div class="title">Apple Watch Series 9</div>
+<span class="rating">4.6 ★</span> <small>(3,421)</small>
+<div class="price"><span class="new">₹41,999</span><span class="old">₹45,999</span><span class="off">8% off</span></div>
+<p class="desc">Heart rate, GPS, Hero style</p>
+<div class="btns"><button class="btn cart">Add to Cart</button><button class="btn buy">Buy Now</button></div>
+</div>
+</article>
+</main>
+
+<!-- Category Table + Filter Form -->
+<aside class="filter">
+<h3>Filter & Compare</h3>
+<label>Category: <select><optgroup label="Electronics"><option>Mobile</option><option>Laptop</option></optgroup><optgroup label="Fashion"><option>Shoes</option><option>Watch</option></optgroup></select></label>
+<label style="margin-left:15px">Price Range: <input type="range" min="500" max="70000"></label>
+
+<table>
+<tr><th>Feature</th><th>Why Rizwan Mart?</th></tr>
+<tr><td>Delivery</td><td>Free in 24hrs - Vizag</td></tr>
+<tr><td>Payment</td><td>UPI, Card, COD</td></tr>
+</table>
+</aside>
+
+<footer>© 2026 Rizwan Mart | Made for Web Dev Practical | Contact: mart@example.com</footer>
+</body>
+</html>
